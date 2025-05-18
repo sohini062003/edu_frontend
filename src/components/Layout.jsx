@@ -51,7 +51,7 @@ const Layout = () => {
                 <img 
                   src={logo} 
                   alt="LearnGeniee Logo"
-                  className="h-10 w-auto transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+                  className="h-20 w-auto transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]"
                 />
                 <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-purple-500 bg-clip-text text-transparent tracking-tight">
                   LearnGeniee
