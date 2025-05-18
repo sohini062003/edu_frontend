@@ -29,11 +29,11 @@ const Layout = () => {
 
   // Navigation links data
   const navLinks = [
-    { path: "/", name: "Home", color: "from-cyan-400 to-cyan-500" },
+    { path: "/", name: "Home", color: "from-gray-400 to-gray-500" },
     { path: "/aboutus", name: "About", color: "from-purple-400 to-purple-500" },
     { path: "/summarizer", name: "Summarizer", color: "from-cyan-400 to-cyan-500" },
-    { path: "/qa-generator", name: "Q&A Gen", color: "from-purple-400 to-purple-500" },
-    { path: "/job-recommend", name: "Career Match", color: "from-cyan-400 to-cyan-500" },
+    { path: "/qa-generator", name: "Q&A Gen", color: "from-green-400 to-green-500" },
+    { path: "/job-recommend", name: "Career Match", color: "from-yellow-400 to-yellow-500" },
   ];
 
   return (
