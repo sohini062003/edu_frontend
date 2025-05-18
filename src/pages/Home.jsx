@@ -114,11 +114,11 @@ const Home = () => {
           Get Started
         </button>
       </Link>
-      <Link to="#features">
-        <button className="bg-black/70 hover:bg-black/90 text-white font-bold py-4 px-10 rounded-full border border-gray-600 shadow-[0_10px_20px_-5px_rgba(255,255,255,0.1)] hover:shadow-[0_15px_30px_-5px_rgba(255,255,255,0.2)] transition-all hover:scale-105">
-          Explore Features
-        </button>
-      </Link>
+      <Link to="/aboutus">
+  <button className="bg-black/70 hover:bg-black/90 text-white font-bold py-4 px-10 rounded-full border border-gray-600 shadow-[0_10px_20px_-5px_rgba(255,255,255,0.1)] hover:shadow-[0_15px_30px_-5px_rgba(255,255,255,0.2)] transition-all hover:scale-105">
+    Know More
+  </button>
+</Link>
     </motion.div>
 
     {/* Scroll Down Arrow */}
@@ -154,6 +154,7 @@ const Home = () => {
         description: "Our AI analyzes complex engineering texts and extracts key concepts, creating concise summaries that highlight the most important information. Perfect for exam prep and quick reviews.Save time and focus on what matters most in your studies. Get summaries tailored to your learning style and preferences.Ideal for busy students who need to grasp concepts quickly and efficiently.",
         icon: <FaBookOpen className="text-5xl text-cyan-400" />,
         image: sum,
+        link: "/summarizer",
         reverse: false
       },
       {
@@ -161,6 +162,7 @@ const Home = () => {
         description: "Automatically generates practice questions from your study materials. The AI creates multiple question types including conceptual, numerical, and application-based questions.Ideal for self-assessment and exam preparation.Get personalized quizzes based on your study materials and track your progress over time.",
         icon:<FaComments className="text-5xl text-green-400" />,
         image: q,
+        link: "/qa-generator",
         reverse: true
       },
       {
@@ -168,6 +170,7 @@ const Home = () => {
         description: "24/7 personalized assistance for all your engineering queries. Our chatbot understands technical concepts across multiple engineering disciplines and provides detailed explanations.Whether you need help with a specific topic or just want to chat about engineering, our AI is here for you.Get instant answers to your questions, explanations of complex concepts, and even study tips tailored to your learning style.",
         icon:  <FaRobot className="text-5xl text-purple-400" />,
         image: tutorbot,
+        link: "/tutor-chat",
         reverse: false
       },
       {
@@ -175,6 +178,7 @@ const Home = () => {
         description: "Our system analyzes your skills and learning patterns to recommend the most suitable engineering career paths and job opportunities in your field.Get personalized job suggestions based on your profile.Find internships and job openings that match your skills and interests.",
         icon: <FaBriefcase className="text-5xl text-yellow-400" />,
         image: job,
+        link: "/job-recommend",
         reverse: true
       }
     ].map((feature, index) => (
