@@ -9,6 +9,7 @@ import QAGenerator from "./pages/QAGenerator";
 import JobRecommendation from "./pages/Job_Recommendation";
 import NotFound from "./pages/NotFound";
 import "./index.css";
+import SmartGineer from "./pages/SmartGineer";
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       {path: "aboutus", element: <AboutUs /> },
       { path: "summarizer", element: <Summarizer /> },
       { path: "qa-generator", element: <QAGenerator /> },
+      {path: "smartgineer", element: <SmartGineer /> },
       {path: "job-recommend", element: <JobRecommendation /> },
       { path: "*", element: <NotFound /> },
     ],
