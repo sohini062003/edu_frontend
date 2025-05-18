@@ -75,10 +75,10 @@ const ChatWidget = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.9 }}
             transition={{ type: "spring", bounce: 0.25 }}
-            className="w-80 h-96 mt-4 bg-white text-black shadow-2xl rounded-xl flex flex-col overflow-hidden border border-blue-700"
+            className="w-80 h-96 mt-4 bg-white text-black shadow-2xl rounded-xl flex flex-col overflow-hidden border border-purple-700"
           >
-            <div className="bg-blue-700 text-white px-4 py-3 font-semibold text-sm flex items-center justify-between">
-              🤖 AI Chat Assistant
+            <div className="bg-purple-700 text-white px-4 py-3 font-semibold text-sm flex items-center justify-between">
+              🤖 SmartGineer- Your AI Buddy!
             </div>
 
             <div className="flex-1 p-3 overflow-y-auto text-sm space-y-3 custom-scrollbar">
@@ -91,7 +91,7 @@ const ChatWidget = () => {
                   className={`p-2 rounded-xl max-w-xs ${
                     msg.type === "user"
                       ? "bg-yellow-100 self-end ml-auto text-right"
-                      : "bg-blue-100 self-start mr-auto text-left"
+                      : "bg-purple-100 self-start mr-auto text-left"
                   }`}
                 >
                   {msg.text}
@@ -123,7 +123,7 @@ const ChatWidget = () => {
               <button
                 onClick={sendMessage}
                 disabled={isSending}
-                className="bg-blue-700 text-white px-4 rounded-r-md hover:bg-blue-800 transition text-sm"
+                className="bg-purple-700 text-white px-4 rounded-r-md hover:bg-purple-800 transition text-sm"
               >
                 {isSending ? "..." : "Send"}
               </button>
