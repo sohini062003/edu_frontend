@@ -66,43 +66,29 @@ const Home = () => {
   </video>
 
   <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
-    {/* Logo Container */}
+    {/* Logo Container Only */}
     <motion.div
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="flex justify-center mb-2" // Reduced margin-bottom
+      className="flex justify-center mb-3"
     >
       <img 
         src={logo} 
         alt="LearnGeniee Logo" 
-        className="h-50 w-auto md:h-50" // Larger size for visibility
+        className="h-50 w-auto md:h-50"
       />
-    </motion.div>
-
-    {/* Title with smaller text */}
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.2, duration: 1 }}
-    >
-      <h1 className="text-4xl md:text-4xl font-extrabold text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.2)]">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
-          LearnGeniee
-        </span>
-      </h1>
     </motion.div>
 
     <motion.p
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.4, duration: 1 }}
-      className="text-lg md:text-2xl mb-8 text-gray-100 max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] mt-4" // Added margin-top
+      className="text-lg md:text-2xl mb-8 text-gray-100 max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] mt-4"
     >
       Revolutionizing engineering education with AI-powered tools for smarter, faster, sharper learning.
     </motion.p>
 
-    {/* Rest of your buttons and arrow... */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -115,10 +101,10 @@ const Home = () => {
         </button>
       </Link>
       <Link to="/aboutus">
-  <button className="bg-black/70 hover:bg-black/90 text-white font-bold py-4 px-10 rounded-full border border-gray-600 shadow-[0_10px_20px_-5px_rgba(255,255,255,0.1)] hover:shadow-[0_15px_30px_-5px_rgba(255,255,255,0.2)] transition-all hover:scale-105">
-    Know More
-  </button>
-</Link>
+        <button className="bg-black/70 hover:bg-black/90 text-white font-bold py-4 px-10 rounded-full border border-gray-600 shadow-[0_10px_20px_-5px_rgba(255,255,255,0.1)] hover:shadow-[0_15px_30px_-5px_rgba(255,255,255,0.2)] transition-all hover:scale-105">
+          Know More
+        </button>
+      </Link>
     </motion.div>
 
     {/* Scroll Down Arrow */}
@@ -133,7 +119,6 @@ const Home = () => {
     </motion.div>
   </div>
 </section>
-
       {/* Features in Zig-Zag Pattern */}
 <section id="features" className="relative py-24">
   <div className="container mx-auto px-6">
@@ -170,7 +155,7 @@ const Home = () => {
         description: "24/7 personalized assistance for all your engineering queries. Our chatbot understands technical concepts across multiple engineering disciplines and provides detailed explanations.Whether you need help with a specific topic or just want to chat about engineering, our AI is here for you.Get instant answers to your questions, explanations of complex concepts, and even study tips tailored to your learning style.",
         icon:  <FaRobot className="text-5xl text-purple-400" />,
         image: tutorbot,
-        link: "/tutor-chat",
+        link: "/smartgineer",
         reverse: false
       },
       {
@@ -424,10 +409,10 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
               <div className="flex items-center mb-4">
-                <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">AI StudyMate</span>
+                <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">LearnGeniee</span>
               </div>
               <p className="text-gray-400">
-                The premier AI-powered learning platform for engineering students worldwide.
+                The premier AI-powered learning platform for students worldwide.
               </p>
             </div>
             
@@ -463,7 +448,7 @@ const Home = () => {
           
           <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} AI StudyMate. All rights reserved.
+              © {new Date().getFullYear()} LearnGeniee. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-500 hover:text-cyan-400 transition">
