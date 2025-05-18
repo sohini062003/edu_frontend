@@ -8,12 +8,10 @@ const Layout = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Close mobile menu when clicking on a link
   const closeMobileMenu = () => {
     setIsMenuOpen(false);
   };
 
-  // Handle scroll effect for navbar
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -27,7 +25,6 @@ const Layout = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Navigation links data
   const navLinks = [
     { path: "/", name: "Home", color: "from-gray-400 to-gray-500" },
     { path: "/aboutus", name: "About", color: "from-purple-400 to-purple-500" },
@@ -38,9 +35,9 @@ const Layout = () => {
 
   return (
     <>
-      <nav className={`bg-gradient-to-br from-gray-900 via-black-800 to-black-900 backdrop-blur-lg shadow-xl sticky top-0 z-50 border-b border-gray-700/50 transition-all duration-300 ${scrolled ? "py-2" : "py-3"}`}>
+      <nav className={`bg-gradient-to-br from-gray-900 via-black-800 to-black-900 backdrop-blur-lg shadow-xl sticky top-0 z-50 border-b border-gray-700/50 transition-all duration-300 ${scrolled ? "py-1" : "py-2"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-14"> {/* Reduced from h-16 */}
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <Link 
@@ -51,23 +48,23 @@ const Layout = () => {
                 <img 
                   src={logo} 
                   alt="LearnGeniee Logo"
-                  className="h-12 w-auto transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+                  className="h-10 w-auto transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]" // Reduced from h-12
                 />
-                <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-purple-500 bg-clip-text text-transparent tracking-tight">
+                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-purple-500 bg-clip-text text-transparent tracking-tight">
                   LearnGeniee
                 </span>
               </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-6">
               {navLinks.map((link) => (
                 <Link 
                   key={link.path}
                   to={link.path} 
-                  className="relative px-1 py-2 font-medium transition-all duration-300 group"
+                  className="relative px-2 py-1 font-medium transition-all duration-300 group"
                 >
-                  <span className="relative z-10 text-gray-300 group-hover:text-white">
+                  <span className="relative z-10 text-gray-300 group-hover:text-white text-lg"> {/* Increased to text-lg */}
                     {link.name}
                   </span>
                   <span className={`absolute inset-0 bg-gradient-to-r ${link.color} rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10`}></span>
@@ -102,7 +99,7 @@ const Layout = () => {
                 key={link.path}
                 to={link.path}
                 onClick={closeMobileMenu}
-                className={`block px-3 py-4 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gradient-to-r ${link.color} hover:bg-opacity-10 transition-all duration-300 border-b border-gray-800 last:border-b-0`}
+                className={`block px-3 py-3 rounded-md text-lg font-medium text-gray-300 hover:text-white hover:bg-gradient-to-r ${link.color} hover:bg-opacity-10 transition-all duration-300 border-b border-gray-800 last:border-b-0`}
               >
                 {link.name}
               </Link>
